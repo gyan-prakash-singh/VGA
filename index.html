@@ -67,12 +67,25 @@
       margin-top: 10px;
       font-weight: bold;
     }
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(20px);} 
+      to {opacity:1; transform: translateY(0);} 
+    }
+    .card { animation: fadeIn 0.8s ease forwards; }
+    .hero { animation: fadeIn 1s ease forwards; }
+
+    @media(max-width: 600px) {
+      header { flex-direction: column; text-align:center; }
+      nav a { margin:10px; display:inline-block; }
+      .hero h2 { font-size:28px; }
+      .section { padding:30px 20px; }
+    }
   </style>
 </head>
 <body>
   <header>
-    <h3>VAG Solutions</h3>
-    <h4><nav>
+    <h1><img src="logo.png" alt="VAG" style="height:40px; vertical-align:middle; margin-right:10px;"> VAG Solutions</h1>
+    <nav>
       <a href="#consulting">Consulting</a>
       <a href="#products">Products</a>
       <a href="#contact">Contact</a>
@@ -113,19 +126,19 @@
       <div class="card">
         <h4>AI Chatbot</h4>
         <p>Enterprise-grade chatbot with multichannel support.</p>
-        <p><strong>Price:</strong> ₹49,999 / year</p>
+     
         <a href="#contact" class="button">View Details</a>
       </div>
       <div class="card">
         <h4>AI Multi-Agent Platform</h4>
         <p>Create autonomous workflows with interacting AI agents.</p>
-        <p><strong>Price:</strong> ₹79,999 / year</p>
+      
         <a href="#contact" class="button">View Details</a>
       </div>
       <div class="card">
         <h4>AI Service Desk</h4>
         <p>LLM-driven IT service automation.</p>
-        <p><strong>Price:</strong> ₹59,999 / year</p>
+        
         <a href="#contact" class="button">View Details</a>
       </div>
       <div class="card">
